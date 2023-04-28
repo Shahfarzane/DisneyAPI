@@ -1,0 +1,70 @@
+.cardContainer {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 24px 0px;
+gap: 16px;
+isolation: isolate;
+
+width: 187.5px;
+height: 256px;
+
+/* Neutral/02 */
+
+background: #F1F4F4;
+/* Neutral/03 */
+
+border-width: 0px 1px 1px 0px;
+border-style: solid;
+border-color: #E1E2E2;
+}
+
+
+.cardInfo {
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+width: 187.5px;
+height: 48px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+}
+
+
+.movieYear {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+
+
+letter-spacing: -0.02em;
+
+
+color: #202025;
+}
+
+
+.rating{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 138px;
+height: 20px;
+
+}

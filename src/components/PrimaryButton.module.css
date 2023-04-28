@@ -1,0 +1,17 @@
+.btn {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 5px 16px;
+gap: 12px;
+background: #202025;
+border-radius: 4px;
+color: #F7FBFA;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 12px;
+line-height: 24px;
+}

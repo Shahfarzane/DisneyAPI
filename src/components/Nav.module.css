@@ -1,0 +1,36 @@
+.navContainer{
+display: flex;
+flex-direction: column;
+padding: 0px 24px;
+gap: 8px;
+width: 375px;
+background: #F7FBFA;
+
+}
+
+.navContent{
+    display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 24px 0px;
+gap: 32px;
+width: 327px;
+height: 88px;
+border-bottom: 1px solid #E1E2E2;
+
+}
+
+.avatarContainer {
+position: relative;
+width: 80px;
+height: 80px;
+background: #DBFF73;
+border: 2px solid #898E8E;
+border-radius: 128px;
+
+}
+
+
+
+

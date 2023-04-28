@@ -1,0 +1,9 @@
+.cover {
+  background-color: 
+#01010180;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 399px;
+  position: relative;
+  width: 375px;
+}
