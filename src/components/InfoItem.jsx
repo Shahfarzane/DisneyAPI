@@ -19,7 +19,7 @@ function InfoItem({ movie }) {
         <div className="bio-links">
           <div className="bio">
             <div className="bio-1"></div>
-            <p className="we-are-laying-the-gr">MOVIE DESCRIPTION HERE !!!!</p>
+            <p className="we-are-laying-the-gr">{movie.description}</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-// import PrimaryButton from "./PrimaryButton";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../store";
@@ -9,8 +8,8 @@ const Form = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [year, setYear] = useState("");
-  // const [rating, setRating] = useState("");
-  const [coverImage, setCoverImage] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -18,14 +17,13 @@ const Form = () => {
     const newMovie = {
       name,
       year,
-      rating: "",
-      cover_image: coverImage
+      description,
+      image
     };
-    console.log(dispatch(addMovie(newMovie)));
+    dispatch(addMovie(newMovie));
     setName("");
     setYear("");
-    // setRating("");
-    setCoverImage("");
+    setImage("");
     navigate("/main");
   };
   return (
@@ -49,11 +47,15 @@ const Form = () => {
       <label>Cover Image</label>
       <input
         type="text"
-        onChange={(e) => setCoverImage(e.target.value)}
-        value={coverImage}
+        onChange={(e) => setImage(e.target.value)}
+        value={image}
       />
       <label>Description</label>
-      <textarea rows={6} />
+      <textarea
+        rows={6}
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
       <button>Submit</button>
     </form>
   );

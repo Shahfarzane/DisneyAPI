@@ -11,9 +11,7 @@ const Info = () => {
       <div
         className={styles.cover}
         style={{
-          backgroundImage: `url(
-            ${movie.cover_image}
-          ) `
+          backgroundImage: `url(${movie.image})`
         }}
       ></div>
 

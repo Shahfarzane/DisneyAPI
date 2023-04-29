@@ -9,7 +9,7 @@ const Card = ({ movie }) => {
   return (
     <article className={styles.cardContainer}>
       <figure>
-        <img src={movie.cover_image} alt={name} width="100px" />
+        <img src={movie.image} alt={movie.name} width="100px" />
         <figcaption>{movie.name}</figcaption>
       </figure>
 

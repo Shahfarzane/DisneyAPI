@@ -2,9 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchMovies = createAsyncThunk("movies/fetch", async () => {
   const response = await fetch(
-    "https://mocki.io/v1/f98f77f5-78b6-439b-88f0-aa86faf16a33"
+    "https://mocki.io/v1/72895be2-d522-4a19-a096-f87c2c654a43"
   );
-
   const data = await response.json();
   return data.movies;
 });
@@ -18,17 +17,25 @@ export const moviesSlice = createSlice({
   },
   reducers: {
     addMovie: (state, action) => {
-      console.log("Adding movie", action.payload);
       state.movies.push(action.payload);
     }
   },
+
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state, action) => {
       state.status = "loading";
     });
+
     builder.addCase(fetchMovies.fulfilled, (state, action) => {
       state.status = "succeeded";
-      state.movies = action.payload;
+      const newMovies = action.payload.filter(
+        (fetchedMovie) =>
+          !state.movies.some(
+            (existingMovie) => existingMovie.id === fetchedMovie.id
+          )
+      );
+
+      state.movies = [...state.movies, ...newMovies];
     });
     builder.addCase(fetchMovies.rejected, (state, action) => {
       state.status = "failed";
