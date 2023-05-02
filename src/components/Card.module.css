@@ -1,70 +1,85 @@
 .cardContainer {
-    display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 24px 0px;
-gap: 16px;
-isolation: isolate;
-
-width: 187.5px;
-height: 256px;
-
-/* Neutral/02 */
-
-background: #F1F4F4;
-/* Neutral/03 */
-
-border-width: 0px 1px 1px 0px;
-border-style: solid;
-border-color: #E1E2E2;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+ 
+    /* background: #F1F4F4;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #E1E2E2; */
+        align-self: baseline;
+    margin-right: 0.5rem;
 }
 
-
-.cardInfo {
+.cardRow{
     display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 4px;
-
-width: 187.5px;
-height: 48px;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-z-index: 1;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 0.5rem;
+   
+    
 }
+
+.card {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem;
+    background: #F7FBFA;
+    text-align: left;
+    width: calc(100% - 0.5rem);
+    justify-content: flex-start;
+
+    
+}
+
 
 
 .movieYear {
-    font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-
-
-letter-spacing: -0.02em;
-
-
-color: #202025;
+    font-weight: 600;
+    font-size: 14px;
+    color:  #202b39;
 }
 
 
-.rating{
-    display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 4px;
 
-width: 138px;
-height: 20px;
 
+
+
+.movieCover {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
 }
+
+
+.movieCover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.movieTitle {
+     margin-top: 0.5rem;
+    /* font-size: 1.1rem;
+    font-weight: 700;  */
+}
+
+.movieGenre {
+  margin: 0.22rem 0 0.2rem;
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  background: #CABDFF;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  width: fit-content;
+}
+
+

@@ -1,0 +1,38 @@
+
+
+
+
+
+
+.adminContainer {
+    display: flex;
+
+}
+.adminButtons {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FCFCFC;
+
+
+
+}
+
+
+
+.adminButtons .icon {
+  width: 20px;
+  height: 20px;
+  fill: #6F767E;
+  transition: fill .2s;
+}
+
+svg,
+img {
+  vertical-align: middle;
+}

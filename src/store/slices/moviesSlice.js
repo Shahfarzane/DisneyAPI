@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, nanoid } from "@reduxjs/toolkit";
 
 export const fetchMovies = createAsyncThunk("movies/fetch", async () => {
   const response = await fetch(
-    "https://mocki.io/v1/72895be2-d522-4a19-a096-f87c2c654a43"
+    "https://mocki.io/v1/c7972904-70e0-4b60-ba71-9315758dba85"
   );
   const data = await response.json();
   return data.movies;
@@ -17,10 +17,31 @@ export const moviesSlice = createSlice({
   },
   reducers: {
     addMovie: (state, action) => {
-      state.movies.push(action.payload);
+      state.movies.unshift({
+        id: nanoid(),
+        name: action.payload.name,
+        image: action.payload.image,
+        year: action.payload.year,
+        genre: action.payload.genre,
+        description: action.payload.description
+      });
+    },
+    updateMovie: (state, action) => {
+      const { id, name, image, year, genre, description } = action.payload;
+      const existingMovie = state.movies.find((movie) => movie.id === id);
+      if (existingMovie) {
+        existingMovie.name = name;
+        existingMovie.image = image;
+        existingMovie.year = year;
+        existingMovie.genre = genre;
+        existingMovie.description = description;
+      }
+    },
+    deleteMovie: (state, action) => {
+      const movieId = action.payload;
+      state.movies = state.movies.filter((movie) => movie.id !== movieId);
     }
   },
-
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state, action) => {
       state.status = "loading";
@@ -44,5 +65,5 @@ export const moviesSlice = createSlice({
   }
 });
 
-export const { addMovie } = moviesSlice.actions;
+export const { addMovie, updateMovie, deleteMovie } = moviesSlice.actions;
 export default moviesSlice.reducer;

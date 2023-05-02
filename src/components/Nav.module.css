@@ -1,33 +1,44 @@
 .navContainer{
 display: flex;
-flex-direction: column;
-padding: 0px 24px;
+align-items: center;
+width: 100%;
+height: 96px;
+background: #F4F4F4;
 gap: 8px;
-width: 375px;
-background: #F7FBFA;
+left: 0;
+    padding: 16px 24px 16px 16px;
+
 
 }
 
 .navContent{
-    display: flex;
+display: flex;
 flex-direction: row;
-align-items: center;
 justify-content: space-between;
-padding: 24px 0px;
-gap: 32px;
-width: 327px;
-height: 88px;
-border-bottom: 1px solid #E1E2E2;
+align-items: center;
+padding: 24px;
+
+
+position: absolute;
+height: 96px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* Neutral/01 */
+
+background: #FCFCFC;
+box-shadow: inset 0px -1px 0px #F4F4F4;
 
 }
 
 .avatarContainer {
-position: relative;
+/* position: relative;
 width: 80px;
 height: 80px;
 background: #DBFF73;
 border: 2px solid #898E8E;
-border-radius: 128px;
+border-radius: 128px; */
 
 }
 

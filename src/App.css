@@ -1,7 +1,15 @@
 .container {
-  width: 375px;
-  min-height: 667px;
-  margin: auto;
-  padding-bottom: 1.5rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

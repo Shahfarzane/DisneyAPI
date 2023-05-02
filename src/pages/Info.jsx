@@ -1,20 +1,20 @@
 import InfoItem from "../components/InfoItem";
 import styles from "./info.module.css";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
+import { useSelector } from "react-redux";
 
 const Info = () => {
-  const location = useLocation();
-  const movie = location.state;
+
+  const { movieId } = useParams();
+  const movie = useSelector((state) =>
+    state.movies.movies.find((movie) => movie.id.toString() === movieId)
+  );
+
 
   return (
     <>
-      <div
-        className={styles.cover}
-        style={{
-          backgroundImage: `url(${movie.image})`
-        }}
-      ></div>
-
       <InfoItem movie={movie} />
     </>
   );

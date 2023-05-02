@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import styles from "./Dashboard.module.css";
+import CardHeader from "./CardHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../store/slices/moviesSlice";
-import Card from "./Card";
-import styles from "./Movies.module.css";
-import { Link } from "react-router-dom";
-import CardHeader from "./CardHeader";
+import DashboardCard from "./DashboardCard";
 
-const MoviesSection = () => {
+const Dashboard = () => {
   const dispatch = useDispatch();
+  // const { movieId } = useParams();
 
   const { movies, status, error } = useSelector((state) => {
     return state.movies;
@@ -26,24 +26,15 @@ const MoviesSection = () => {
 
   const renderedMovies = Array.isArray(movies)
     ? movies.map((movie, i) => {
-        return <Card movie={movie} key={i} />;
+        return <DashboardCard movie={movie} key={i} />;
       })
     : null;
-
-  const empty = movies.length === 0;
-  if (status === "loading") {
-    return <h1>Loading...</h1>;
-  }
-  if (status === "failed") {
-    return <div>Error Fetching data..{error}</div>;
-  }
-
   return (
-    <div className={styles.moviesContainer}>
-      {" "}
-      {empty ? <h2>There are no movies.</h2> : renderedMovies}
-    </div>
+    <>
+      <CardHeader title={"Dashboard"} />
+      <section className={styles.card}>{renderedMovies}</section>
+    </>
   );
 };
 
-export default MoviesSection;
+export default Dashboard;

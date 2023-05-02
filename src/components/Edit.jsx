@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addMovie,
+  updateMovie,
   changeName,
   changeDescription,
   changeGenre,
@@ -10,11 +10,13 @@ import {
 } from "../store";
 import styles from "./form.module.css";
 // import styles from "./Form.module.sass";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const Form = () => {
+const Edit = ({ movie, onMovieUpdate }) => {
   const dispatch = useDispatch();
+  // const { movieId } = useParams();
   const navigate = useNavigate();
+
   const { name, year, image, genre, description } = useSelector((state) => {
     return {
       name: state.form.name,
@@ -24,6 +26,14 @@ const Form = () => {
       description: state.form.description
     };
   });
+
+  useEffect(() => {
+    dispatch(changeName(movie.name));
+    dispatch(changeYear(movie.year));
+    dispatch(changeImage(movie.image));
+    dispatch(changeGenre(movie.genre));
+    dispatch(changeDescription(movie.description));
+  }, [dispatch, movie]);
 
   const handleNameChange = (e) => {
     dispatch(changeName(e.target.value));
@@ -43,9 +53,10 @@ const Form = () => {
   const handleImageChange = (e) => {
     dispatch(changeImage(e.target.value));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addMovie({ name, year, image, genre, description }));
+    onMovieUpdate({ id: movie.id, name, year, image, genre, description });
     navigate("/main");
   };
   return (
@@ -112,4 +123,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Edit;

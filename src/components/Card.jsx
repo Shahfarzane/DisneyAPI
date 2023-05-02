@@ -1,22 +1,23 @@
-import styles from "./Card.module.css";
-import PrimaryButton from "./PrimaryButton";
 import { Link } from "react-router-dom";
+import styles from "./Card.module.css";
 
 const Card = ({ movie }) => {
-  const handleOnClick = () => {
-    <Link to={`/movies/${movie.id}`}></Link>;
-  };
   return (
-    <article className={styles.cardContainer}>
-      <figure>
-        <img src={movie.image} alt={movie.name} width="100px" />
-        <figcaption>{movie.name}</figcaption>
-      </figure>
+    <article className={styles.card}>
+      <Link to={`/info/${movie.id}`} state={movie}>
+        <div className={styles.cardContainer}>
+          <div className={styles.movieCover}>
+            <img src={movie.image} alt={movie.name} />
+          </div>
+        </div>
+      </Link>
 
-      <div className={styles.cardInfo}>
-        <p className={styles.movieYear}>{movie.year}</p>
-
-        <PrimaryButton onClick={handleOnClick}>More</PrimaryButton>
+      <div className={styles.cardRow}>
+        <Link to={`/info/${movie.id}`} state={movie}>
+          <h3 className={styles.collections__subtitle}>{movie.name}</h3>
+          <p className={styles.movieYear}>{movie.year}</p>
+          <p className={styles.movieGenre}>{movie.genre}</p>
+        </Link>
       </div>
     </article>
   );
