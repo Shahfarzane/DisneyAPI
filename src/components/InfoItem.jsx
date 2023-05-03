@@ -1,10 +1,7 @@
 import styles from "./InfoItem.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteMovie, updateMovie } from "../store";
-import trashIcon from "../assets/trash.svg";
-import editIcon from "../assets/edit.svg";
-import Fav from "./Fav";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteMovie } from "../store";
 import AdminButtons from "./AdminButtons";
 
 function InfoItem({ movie }) {

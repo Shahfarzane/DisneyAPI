@@ -6,6 +6,7 @@
 
 .adminContainer {
     display: flex;
+    gap:8px;
 
 }
 .adminButtons {
@@ -30,6 +31,12 @@
   height: 20px;
   fill: #6F767E;
   transition: fill .2s;
+}
+
+ .icon:first-child {
+
+  fill: #1c72d5 !important;
+
 }
 
 svg,

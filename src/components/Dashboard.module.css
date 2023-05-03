@@ -10,10 +10,10 @@
 
 
 .cardItemContainer{
-        margin-bottom:1rem;
+     margin-bottom:1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #EFEFEF;
-        display: flex;
+     display: flex;
     justify-content: space-between;
 
 }
@@ -21,7 +21,6 @@
 
 .cardItem{
         margin-bottom: 12px;
-          
     display: flex;
     align-items: center;
     padding: 0;
@@ -66,7 +65,7 @@ img, fieldset, a img {
 .cardItemTitle{
     max-width: 100%;
 
-    
+    text-align: left;
     font-size: 14px;
 
     letter-spacing: -0.02em;
@@ -74,7 +73,7 @@ img, fieldset, a img {
 }
 
 .cardItemDetails{
-
+ text-align: left;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.23077;

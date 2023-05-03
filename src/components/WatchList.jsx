@@ -9,7 +9,6 @@ const WatchList = () => {
       <div className={styles.ListItemAvatarContainer}>
         <img src={movie.image} alt={movie.name} />
       </div>
-
       <h6 className={styles.LisItemTitle}>{movie.name}</h6>
     </article>
   ));

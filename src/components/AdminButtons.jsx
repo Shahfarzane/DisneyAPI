@@ -9,9 +9,7 @@ import { addToWatchList, removeFromWatchList } from "../store";
 
 const AdminButtons = ({ movie, handleDelete }) => {
   const dispatch = useDispatch();
-
   const watchList = useSelector((state) => state.watchList.watchList);
-
   const isFavorite = watchList.some((favMovie) => favMovie.id === movie.id);
 
   const addToWatchListHandler = () => {

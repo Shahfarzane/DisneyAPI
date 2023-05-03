@@ -7,12 +7,11 @@ import DashboardCard from "./DashboardCard";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
-  // const { movieId } = useParams();
 
   const { movies, status, error } = useSelector((state) => {
     return state.movies;
   });
-  const [moviesUpdate, setMoviesUpdate] = useState(false); // Add this line
+  const [moviesUpdate, setMoviesUpdate] = useState(false);
   const forceUpdate = () => setMoviesUpdate(!moviesUpdate);
 
   useEffect(() => {
