@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import moviesReducer, {
-  addMovie,
+  createMovie,
   updateMovie,
   deleteMovie
 } from "./slices/moviesSlice";
@@ -26,7 +26,7 @@ const store = configureStore({
 });
 
 export {
-  addMovie,
+  createMovie,
   updateMovie,
   deleteMovie,
   changeDescription,
@@ -37,5 +37,7 @@ export {
   addToWatchList,
   removeFromWatchList
 };
+
+export * from "./thunks/fetchMovies";
 
 export default store;

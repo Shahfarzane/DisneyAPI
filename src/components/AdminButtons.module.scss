@@ -1,0 +1,33 @@
+@use "variables";
+
+.adminContainer {
+  display: flex;
+  gap: 8px;
+}
+.adminButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: $primary-color;
+  .icon {
+    width: 20px;
+    height: 20px;
+    fill: $icons-color;
+    transition: fill 0.2s;
+  }
+}
+.icon {
+  &:first-child {
+    background-color: #1c72d5 !important;
+  }
+}
+svg {
+  vertical-align: middle;
+}
+img {
+  vertical-align: middle;
+}

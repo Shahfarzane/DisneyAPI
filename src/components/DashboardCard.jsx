@@ -14,7 +14,7 @@ const DashboardCard = ({ movie }) => {
   };
   return (
     <article className={styles.cardItemContainer}>
-      <Link to={`/info/${movie.id}`} state={movie}>
+      <Link to={`/details/${movie.id}`} state={movie}>
         <div className={styles.cardRow}>
           <div className={styles.cardAvatarContainer}>
             <img src={movie.image} alt="arrow" />
@@ -22,7 +22,7 @@ const DashboardCard = ({ movie }) => {
         </div>
       </Link>
       <div className={styles.cardRow}>
-        <Link to={`/info/${movie.id}`} state={movie}>
+        <Link to={`/details/${movie.id}`} state={movie}>
           <h6 className={styles.cardItemTitle}>{movie.name}</h6>
         </Link>
       </div>

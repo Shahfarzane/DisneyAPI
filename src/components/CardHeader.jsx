@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CardHeader.module.css";
 import arrowIcon from "../assets/arrow.svg";
 
-const CardHeader = ({ title }) => {
+const CardHeader = ({ title, btnText }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -11,7 +11,7 @@ const CardHeader = ({ title }) => {
         </div>
         <a href="/" className={styles.buttonSmall}>
           <img src={arrowIcon} alt="back button" className={styles.icon} />
-          BACK
+          {btnText}
         </a>
       </div>
     </div>

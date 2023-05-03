@@ -1,10 +1,10 @@
-import styles from "./InfoItem.module.css";
+import styles from "./MovieEntity.module.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteMovie } from "../store";
 import AdminButtons from "./AdminButtons";
 
-function InfoItem({ movie }) {
+function MovieEntity({ movie }) {
   if (!movie) {
     return null;
   }
@@ -52,4 +52,4 @@ function InfoItem({ movie }) {
   );
 }
 
-export default InfoItem;
+export default MovieEntity;

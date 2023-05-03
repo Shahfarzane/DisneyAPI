@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-// import EditMovie from "../components/EditMovie";
-// import Edit from "../components/Edit";
 import { useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateMovie } from "../store";
-import MainForm from "../components/MainForm";
+import Form from "../components/Form";
+import CardHeader from "../components/CardHeader";
 
 const EditPage = () => {
   const { movieId } = useParams();
@@ -20,12 +18,13 @@ const EditPage = () => {
   const handleSubmit = (e, updatedMovie) => {
     e.preventDefault();
     dispatch(updateMovie(updatedMovie));
-    navigate(`/info/${updatedMovie.id}`);
+    navigate(`/details/${updatedMovie.id}`);
   };
 
   return (
     <div>
-      <MainForm movie={movie} onSubmit={handleSubmit} />
+      <CardHeader title="Edit Movie" btnText={"Back to Details"} />
+      <Form movie={movie} onSubmit={handleSubmit} btnTextValue={"Update"} />
     </div>
   );
 };

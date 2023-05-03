@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Dashboard.module.css";
 import CardHeader from "./CardHeader";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies } from "../store/slices/moviesSlice";
+import { fetchMovies } from "../store";
 import DashboardCard from "./DashboardCard";
 
 const Dashboard = () => {
@@ -12,15 +12,14 @@ const Dashboard = () => {
     return state.movies;
   });
   const [moviesUpdate, setMoviesUpdate] = useState(false);
-  const forceUpdate = () => setMoviesUpdate(!moviesUpdate);
+  const reFetchMovies = () => setMoviesUpdate(!moviesUpdate);
 
   useEffect(() => {
     if (status === "idle") dispatch(fetchMovies());
-    console.log(status);
   }, [dispatch, status]);
 
   useEffect(() => {
-    forceUpdate();
+    reFetchMovies();
   }, [movies]);
 
   const renderedMovies = Array.isArray(movies)
@@ -30,7 +29,7 @@ const Dashboard = () => {
     : null;
   return (
     <>
-      <CardHeader title={"Dashboard"} />
+      <CardHeader title={"Dashboard"} btnText={"Home"} />
       <section className={styles.card}>{renderedMovies}</section>
     </>
   );

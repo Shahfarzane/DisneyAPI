@@ -1,12 +1,5 @@
-import { createSlice, createAsyncThunk, nanoid } from "@reduxjs/toolkit";
-
-export const fetchMovies = createAsyncThunk("movies/fetch", async () => {
-  const response = await fetch(
-    "https://mocki.io/v1/c7972904-70e0-4b60-ba71-9315758dba85"
-  );
-  const data = await response.json();
-  return data.movies;
-});
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { fetchMovies } from "../thunks/fetchMovies";
 
 export const moviesSlice = createSlice({
   name: "movies",
@@ -16,7 +9,7 @@ export const moviesSlice = createSlice({
     error: null
   },
   reducers: {
-    addMovie: (state, action) => {
+    createMovie: (state, action) => {
       state.movies.unshift({
         id: nanoid(),
         name: action.payload.name,
@@ -65,5 +58,5 @@ export const moviesSlice = createSlice({
   }
 });
 
-export const { addMovie, updateMovie, deleteMovie } = moviesSlice.actions;
+export const { createMovie, updateMovie, deleteMovie } = moviesSlice.actions;
 export default moviesSlice.reducer;

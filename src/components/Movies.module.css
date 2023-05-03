@@ -10,14 +10,8 @@
     background: #FCFCFC;
     text-align: center;
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.0364401);
-        margin-top:0.5rem;
-
-
-
-  
+    margin-top:0.5rem;
     gap: 16px;
-
-
 
 
 }
@@ -31,7 +25,3 @@
     gap: 16px;
 
 }
-/* .moviesContainer a article {
- flex:1;
-}
- */

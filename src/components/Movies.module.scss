@@ -1,0 +1,24 @@
+@use "variables";
+
+.moviesContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+  border-radius: 8px;
+  padding: 16px;
+  background: $primary-color;
+  text-align: center;
+  box-shadow: $box-shadow-3;
+  margin-top: 0.5rem;
+  gap: 16px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 16px;
+  gap: 16px;
+}

@@ -19,7 +19,7 @@ const WatchList = () => {
     <section className={styles.card}>
       <div className={styles.watchListContainer}>
         {empty ? (
-          <h2>No Movies has been added to watch-list yet</h2>
+          <h2>No Movies has been added to Top List</h2>
         ) : (
           renderedFavorites
         )}

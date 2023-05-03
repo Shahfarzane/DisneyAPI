@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addMovie, updateMovie } from "./moviesSlice";
+import { createMovie, updateMovie } from "./moviesSlice";
 
 const formSlice = createSlice({
   name: "form",
@@ -29,7 +29,7 @@ const formSlice = createSlice({
     }
   },
   extraReducers(builder) {
-    builder.addCase(addMovie, (state, action) => {
+    builder.addCase(createMovie, (state, action) => {
       (state.name = ""),
         (state.description = ""),
         (state.year = 0),

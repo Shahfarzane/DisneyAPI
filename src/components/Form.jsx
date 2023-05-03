@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
-  updateMovie,
   changeName,
   changeDescription,
   changeGenre,
@@ -9,13 +9,9 @@ import {
   changeYear
 } from "../store";
 import styles from "./form.module.css";
-// import styles from "./Form.module.sass";
-import { useNavigate, useParams } from "react-router-dom";
 
-const MainForm = ({ movie, onSubmit }) => {
+const Form = ({ movie, onSubmit, btnTextValue }) => {
   const dispatch = useDispatch();
-  const { movieId } = useParams();
-  const navigate = useNavigate();
 
   const { name, year, image, genre, description } = useSelector((state) => {
     return {
@@ -94,7 +90,7 @@ const MainForm = ({ movie, onSubmit }) => {
         onChange={handleYearChange}
       />
 
-      <label className={styles.label}>Cover Image</label>
+      <label className={styles.label}>Cover Image URL</label>
       <input
         className={styles.formInput}
         type="text"
@@ -109,9 +105,7 @@ const MainForm = ({ movie, onSubmit }) => {
         onChange={handleDescriptionChange}
       />
 
-      <label className={styles.label} htmlFor="genre">
-        Genre
-      </label>
+      <label className={styles.label}>Genre</label>
       <div className={styles.wrap}>
         <select
           name="genre"
@@ -132,10 +126,10 @@ const MainForm = ({ movie, onSubmit }) => {
         </select>
       </div>
       <div className={styles.btnContainer}>
-        <button className={styles.btn}>Submit</button>
+        <button className={styles.btn}>{btnTextValue}</button>
       </div>
     </form>
   );
 };
 
-export default MainForm;
+export default Form;

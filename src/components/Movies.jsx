@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies } from "../store/slices/moviesSlice";
+import { fetchMovies } from "../store";
 import Card from "./Card";
 import styles from "./Movies.module.css";
-import { Link } from "react-router-dom";
-import CardHeader from "./CardHeader";
 
-const MoviesSection = () => {
+const Movies = () => {
   const dispatch = useDispatch();
 
   const { movies, status, error } = useSelector((state) => {
     return state.movies;
   });
-  const [moviesUpdate, setMoviesUpdate] = useState(false); // Add this line
-  const forceUpdate = () => setMoviesUpdate(!moviesUpdate);
+  const [moviesUpdate, setMoviesUpdate] = useState(false);
+  const reFetchMovies = () => setMoviesUpdate(!moviesUpdate);
 
   useEffect(() => {
-    if (status === "idle") dispatch(fetchMovies());
-    console.log(status);
+    if (status === "idle") {
+      dispatch(fetchMovies());
+    }
   }, [dispatch, status]);
 
   useEffect(() => {
-    forceUpdate();
+    reFetchMovies();
   }, [movies]);
 
   const renderedMovies = Array.isArray(movies)
@@ -46,4 +45,4 @@ const MoviesSection = () => {
   );
 };
 
-export default MoviesSection;
+export default Movies;

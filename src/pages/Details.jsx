@@ -1,23 +1,18 @@
-import InfoItem from "../components/InfoItem";
-import styles from "./info.module.css";
+import MovieEntity from "../components/MovieEntity";
 import { useParams } from "react-router-dom";
-
-
 import { useSelector } from "react-redux";
 
-const Info = () => {
-
+const Details = () => {
   const { movieId } = useParams();
   const movie = useSelector((state) =>
     state.movies.movies.find((movie) => movie.id.toString() === movieId)
   );
 
-
   return (
     <>
-      <InfoItem movie={movie} />
+      <MovieEntity movie={movie} />
     </>
   );
 };
 
-export default Info;
+export default Details;
