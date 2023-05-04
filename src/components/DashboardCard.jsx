@@ -10,7 +10,6 @@ const DashboardCard = ({ movie }) => {
 
   const handleDelete = () => {
     dispatch(deleteMovie(movie.id));
-    navigate("/main");
   };
   return (
     <article className={styles.cardItemContainer}>
