@@ -28,9 +28,9 @@ npm run dev
 
 ## Usage
 
-Browse the list of movies on the home page.
-Click on a movie to view its details.
-Click the "Add to Watch-list Icon" button to add the movie to your favorites list.
-Click the "Edit" button to edit the movie details.
-Click the "Delete" button to remove the movie from the list.
-Click the "Top List" button to view your list of favorite movies.
+- Browse the list of movies on the home page.
+- Click on a movie to view its details.
+- Click the "Add to Watch-list Icon" button to add the movie to your favorites list.
+- Click the "Edit" button to edit the movie details.
+- Click the "Delete" button to remove the movie from the list.
+- Click the "Top List" button to view your list of favorite movies.
