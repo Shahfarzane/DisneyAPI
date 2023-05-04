@@ -1,6 +1,5 @@
 import styles from "./Nav.module.scss";
 import account from "../assets/account.svg";
-import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
