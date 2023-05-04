@@ -5,17 +5,14 @@ A simple web application that lets you browse a list of movies, add movies to yo
 ## Technologies Used
 
 - React.js
+- Vite.js
 - Redux Toolkit
 - Sass Modules
 - Axios
 
 ## Installation
 
-Clone the repository: git clone https://github.com/your-username/movie-list.git
-
-```sh
-npm install
-```
+Clone the repository: git clone https://github.com/Shahfarzane/DisneyAPI
 
 Install dependencies:
 
