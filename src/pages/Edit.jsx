@@ -22,10 +22,12 @@ const EditPage = () => {
   };
 
   return (
-    <div>
+    <>
       <CardHeader title="Edit Movie" btnText={"Back to Details"} />
-      <Form movie={movie} onSubmit={handleSubmit} btnTextValue={"Update"} />
-    </div>
+      <div className="form-container">
+        <Form movie={movie} onSubmit={handleSubmit} btnTextValue={"Update"} />
+      </div>
+    </>
   );
 };
 

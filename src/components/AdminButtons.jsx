@@ -1,4 +1,4 @@
-import styles from "./AdminButton.module.css";
+import styles from "./AdminButtons.module.scss";
 import trashIcon from "../assets/trash.svg";
 import editIcon from "../assets/edit.svg";
 import fireFilled from "../assets/fire-filled.svg";

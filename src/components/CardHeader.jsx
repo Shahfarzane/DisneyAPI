@@ -1,19 +1,17 @@
 import React from "react";
-import styles from "./CardHeader.module.css";
+import styles from "./CardHeader.module.scss";
 import arrowIcon from "../assets/arrow.svg";
 
 const CardHeader = ({ title, btnText }) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <div className={styles.headerContainer}>
-          <h3 className={styles.title}>{title}</h3>
-        </div>
-        <a href="/" className={styles.buttonSmall}>
-          <img src={arrowIcon} alt="back button" className={styles.icon} />
-          {btnText}
-        </a>
+    <div className={styles.header}>
+      <div className={styles.headerContainer}>
+        <h3 className={styles.headerTitle}>{title}</h3>
       </div>
+      <a href="/" className={styles.btnWithIcon}>
+        <img src={arrowIcon} alt="back button" className={styles.icon} />
+        {btnText}
+      </a>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import {
   changeImage,
   changeYear
 } from "../store";
-import styles from "./form.module.css";
+import styles from "./form.module.scss";
 
 const Form = ({ movie, onSubmit, btnTextValue }) => {
   const dispatch = useDispatch();
@@ -72,17 +72,17 @@ const Form = ({ movie, onSubmit, btnTextValue }) => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.card}>
-      <div className={styles.card__head}>
-        <div className={styles.title}>Movie information</div>
+      <div className={styles.cardHead}>
+        <div className={styles.cardTitle}>Movie information</div>
       </div>
-      <label className={styles.label}>Movie Name</label>
+      <label className={styles.formLabel}>Movie Name</label>
       <input
         className={styles.formInput}
         type="text"
         value={name}
         onChange={handleNameChange}
       />
-      <label className={styles.label}>Year</label>
+      <label className={styles.formLabel}>Year</label>
       <input
         className={styles.formInput}
         type="number"
@@ -90,14 +90,14 @@ const Form = ({ movie, onSubmit, btnTextValue }) => {
         onChange={handleYearChange}
       />
 
-      <label className={styles.label}>Cover Image URL</label>
+      <label className={styles.formLabel}>Cover Image URL</label>
       <input
         className={styles.formInput}
         type="text"
         onChange={handleImageChange}
         value={image}
       />
-      <label className={styles.label}>Description</label>
+      <label className={styles.formLabel}>Description</label>
       <textarea
         rows={6}
         value={description}
@@ -105,7 +105,7 @@ const Form = ({ movie, onSubmit, btnTextValue }) => {
         onChange={handleDescriptionChange}
       />
 
-      <label className={styles.label}>Genre</label>
+      <label className={styles.formLabel}>Genre</label>
       <div className={styles.wrap}>
         <select
           name="genre"

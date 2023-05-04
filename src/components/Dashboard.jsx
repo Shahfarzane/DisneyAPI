@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./Dashboard.module.css";
+import styles from "./Dashboard.module.scss";
 import CardHeader from "./CardHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../store";

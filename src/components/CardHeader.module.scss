@@ -1,27 +1,30 @@
-@use "variables";
+@import "../styles/variables";
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 16px;
-  gap: 16px;
-}
 .header {
   display: flex;
   align-items: center;
   min-height: 40px;
   justify-content: space-between;
   width: 100%;
+  padding: 0px 8px;
 }
-.title {
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 8px;
+}
+.headerTitle {
   padding-top: 6px;
   padding-bottom: 6px;
   margin-right: auto;
-  font-size: $text-large;
+  font-size: $text-medium;
+  color: $dark-secondary-color;
   position: relative;
   display: inline-block;
-  padding-left: 32px;
+  padding-left: 22px;
   &:before {
     background: $card-header-color;
     content: "";
@@ -35,28 +38,11 @@
     border-radius: 4px;
   }
 }
-.headerContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.buttonSmall {
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 8px;
-  font-size: $text-s-small;
+
+.btnWithIcon {
+  @include btn-default-style;
   color: $btn-color;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: $font-weight-bold;
-  line-height: 1.6;
-  text-align: center;
-  transition: all 0.2s;
   background: none;
-  box-shadow: $box-shadow-1;
   margin-right: 8px;
 }
 .icon {
@@ -65,10 +51,10 @@
   fill: $primary-color;
   transition: all 0.2s;
   margin-right: 8px;
-}
-svg {
-  vertical-align: middle;
-}
-img {
-  vertical-align: middle;
+  svg {
+    vertical-align: middle;
+  }
+  img {
+    vertical-align: middle;
+  }
 }

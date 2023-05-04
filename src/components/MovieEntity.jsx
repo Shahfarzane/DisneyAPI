@@ -1,4 +1,4 @@
-import styles from "./MovieEntity.module.css";
+import styles from "./MovieEntity.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteMovie } from "../store";
@@ -14,7 +14,7 @@ function MovieEntity({ movie }) {
 
   const handleDelete = () => {
     dispatch(deleteMovie(movie.id));
-    navigate("/main");
+    navigate("/");
   };
 
   return (

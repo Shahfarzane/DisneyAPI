@@ -1,0 +1,107 @@
+@import "./variables";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+button {
+  cursor: pointer;
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+textarea {
+  overflow: auto;
+}
+input,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+body {
+  min-width: 375px;
+  background: $body-color;
+  font-size: $text-small;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  font-family: $font-family;
+  color: $text-secondary-color;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 16px;
+  gap: 16px;
+}
+
+.container-space {
+  padding: 16px;
+}
+
+.default-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px;
+  background: $primary-color;
+  text-align: left;
+  box-shadow: $box-shadow-3;
+  margin-top: 0.5rem;
+}
+
+.error {
+  @include errorText;
+}
+
+.errorTextDetails {
+  font-weight: $font-weight-medium;
+  font-size: $text-xlarge;
+  color: $dark-secondary-color;
+}
+
+.btn-error {
+  @include btnError;
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: $btn-hover-secondary;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

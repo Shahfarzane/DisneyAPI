@@ -8,7 +8,6 @@
 :root {
   font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
   font-weight: 400;
-
   outline: none;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,66 +26,18 @@ cursor: pointer;
   text-decoration: none;
 }
 
-a:hover {
-  color: #1966F7;
-}
 
-a:visited {
+a:active,:visited {
   text-decoration: none;
 }
 
 
-
-
-
-body {
-
-  min-width: 375px;
-  background: #F4F4F4;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.6;
-  letter-spacing: -.01em;
-  color: #1A1D1F;
+svg {
+  vertical-align: middle;
+}
+img {
+  vertical-align: middle;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
 
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}

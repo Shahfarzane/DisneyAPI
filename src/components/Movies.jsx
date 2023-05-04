@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../store";
 import Card from "./Card";
-import styles from "./Movies.module.css";
+import styles from "./Movies.module.scss";
+import { Loading } from "./Loading";
+import Error from "./Error";
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -31,10 +33,10 @@ const Movies = () => {
 
   const empty = movies.length === 0;
   if (status === "loading") {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   }
   if (status === "failed") {
-    return <div>Error Fetching data..{error}</div>;
+    return <Error error={error} />;
   }
 
   return (

@@ -1,4 +1,4 @@
-@use "variables";
+@import "../styles/variables";
 
 .cardContainer {
   align-self: baseline;
@@ -7,8 +7,17 @@
 .cardRow {
   display: flex;
   flex-direction: column;
-  //   align-items: start
+  align-items: $flex-align-self;
   margin-left: 0.5rem;
+  .movieTitle {
+    margin-top: 0.5rem;
+  }
+
+  .movieYear {
+    font-weight: $font-weight-medium;
+    font-size: $text-s-small;
+    color: $movie-text-color;
+  }
 }
 .card {
   display: flex;
@@ -19,11 +28,7 @@
   width: calc(100% - 0.5rem);
   justify-content: flex-start;
 }
-.movieYear {
-  font-weight: $font-weight-medium;
-  font-size: $text-small;
-  color: $movie-text-color;
-}
+
 .movieCover {
   border-radius: 5px;
   width: 100px;
@@ -36,17 +41,7 @@
     object-fit: cover;
   }
 }
-.movieTitle {
-  margin-top: 0.5rem;
-}
+
 .movieGenre {
-  margin: 0.22rem 0 0.2rem;
-  padding: 8px;
-  border-radius: 12px;
-  background: #cabdff;
-  font-size: $text-small;
-  line-height: 1.25rem;
-  font-weight: $font-weight-bold;
-  letter-spacing: -0.02em;
-  width: fit-content;
+  @include tag-style;
 }

@@ -1,9 +1,7 @@
-import styles from "./Add.module.css";
-import arrowIcon from "../assets/arrow.svg";
-import Form from "../components/Form";
 import { createMovie } from "../store";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Form from "../components/Form";
 import CardHeader from "../components/CardHeader";
 
 const Add = () => {
@@ -12,12 +10,12 @@ const Add = () => {
   const handleSubmit = (e, newMovie) => {
     e.preventDefault();
     dispatch(createMovie(newMovie));
-    navigate("/main");
+    navigate("/");
   };
   return (
     <>
       <CardHeader title="Add Movie" btnText={" Dashboard"} />
-      <div className={styles.container}>
+      <div className="form-container">
         <Form onSubmit={handleSubmit} btnTextValue={"Create"} />
       </div>
     </>

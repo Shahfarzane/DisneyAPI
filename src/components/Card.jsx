@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Card.module.css";
+import styles from "./Card.module.scss";
 
 const Card = ({ movie }) => {
   return (
@@ -14,7 +14,7 @@ const Card = ({ movie }) => {
 
       <div className={styles.cardRow}>
         <Link to={`/details/${movie.id}`} state={movie}>
-          <h3 className={styles.collections__subtitle}>{movie.name}</h3>
+          <h4>{movie.name}</h4>
           <p className={styles.movieYear}>{movie.year}</p>
           <p className={styles.movieGenre}>{movie.genre}</p>
         </Link>

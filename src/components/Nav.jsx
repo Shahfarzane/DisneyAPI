@@ -1,4 +1,4 @@
-import styles from "./Nav.module.css";
+import styles from "./Nav.module.scss";
 import loginIcon from "../assets/login.png";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <section className={styles.navContainer}>
       <article className={styles.navContent}>
-        <Link to="/main">
+        <Link to="/">
           <h4>Disney</h4>
         </Link>
         <Link to="/add">

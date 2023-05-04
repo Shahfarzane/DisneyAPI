@@ -1,4 +1,4 @@
-@use "variables";
+@import "../styles/variables";
 
 .adminContainer {
   display: flex;
@@ -18,16 +18,11 @@
     height: 20px;
     fill: $icons-color;
     transition: fill 0.2s;
+    svg {
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+    }
   }
-}
-.icon {
-  &:first-child {
-    background-color: #1c72d5 !important;
-  }
-}
-svg {
-  vertical-align: middle;
-}
-img {
-  vertical-align: middle;
 }

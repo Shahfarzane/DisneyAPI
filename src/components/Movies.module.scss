@@ -1,4 +1,4 @@
-@use "variables";
+@import "../styles/variables";
 
 .moviesContainer {
   display: flex;
@@ -8,17 +8,24 @@
   flex-wrap: wrap;
   flex: 1;
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px;
   background: $primary-color;
-  text-align: center;
+  text-align: left;
   box-shadow: $box-shadow-3;
   margin-top: 0.5rem;
-  gap: 16px;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 16px;
-  gap: 16px;
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: #555;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,4 +1,4 @@
-import styles from "./Dashboard.module.css";
+import styles from "./Dashboard.module.scss";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { deleteMovie } from "../store";

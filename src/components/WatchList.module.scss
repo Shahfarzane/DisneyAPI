@@ -1,0 +1,32 @@
+@import "../styles/variables";
+
+.watchListCard {
+  position: relative;
+  padding: 16px;
+  background: $primary-color;
+}
+
+.watchListContainer {
+  display: flex;
+}
+.listItemContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+.ListItemAvatarContainer {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.ListAvatarContainer {
+  margin-right: 0.5rem;
+}
