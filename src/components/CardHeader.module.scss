@@ -1,0 +1,60 @@
+@import "../styles/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 8px;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 8px;
+}
+.headerTitle {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: auto;
+  font-size: $text-medium;
+  color: $dark-secondary-color;
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+  &:before {
+    background: $card-header-color-secondary;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+.btnWithIcon {
+  @include btn-default-style;
+  color: $btn-color;
+  background: none;
+  margin-right: 8px;
+}
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: $primary-color;
+  transition: all 0.2s;
+  margin-right: 8px;
+  svg {
+    vertical-align: middle;
+  }
+  img {
+    vertical-align: middle;
+  }
+}

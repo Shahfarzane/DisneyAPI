@@ -1,0 +1,94 @@
+$primary-color: #fcfcfc;
+$body-color: #f4f4f4;
+$secondary-color: #efefef;
+$icons-color: #6f767e;
+$movie-text-color: #202b39;
+$labels-color: #33383f;
+$bg-color: #01010180;
+$text-secondary-color: #686a6c;
+$tag-color: rgba(225, 226, 226, 0.5);
+$card-header-color: #b5e4ca;
+$btn-color: #1a1d1f;
+$dark-secondary-color: #1a1d1f;
+$btn-bg-color: #2a85ff;
+$btn-hover-secondary: #83bf6e;
+$btn-hover-color: #b1e5fc;
+$error-color: #ff6551;
+$card-header-color-secondary: #cabdff;
+
+$font-family: "Inter", sans-serif;
+$text-s-small: 13px;
+$text-small: 14px;
+$text-normal: 15px;
+$text-medium: 16px;
+$text-large: 18px;
+$text-xlarge: 20px;
+
+$font-weight-medium: 600;
+$font-weight-normal: 400;
+$font-weight-500: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+$box-shadow-1: 0 0 0 2px #efefef inset;
+$box-shadow-2: inset 0 0 0 2px #9a9fa5;
+$box-shadow-3: 0px 12px 16px rgba(0, 0, 0, 0.0364401);
+
+$flex-align-self: self-start;
+
+@mixin form-text-style {
+  font-family: $font-family;
+  font-size: $text-small;
+  font-weight: $font-weight-medium;
+}
+
+@mixin labels-text-style {
+  font-family: $font-family;
+  font-size: $text-large;
+  font-weight: $font-weight-medium;
+}
+
+@mixin tag-style {
+  margin: 0.2rem 0 0.2rem;
+  align-self: start;
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: $dark-secondary-color;
+
+  font-size: $text-s-small;
+  line-height: 1.25rem;
+  font-weight: $font-weight-medium;
+  letter-spacing: -0.02em;
+  width: fit-content;
+}
+
+@mixin btn-default-style {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: $text-s-small;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  transition: all 0.2s;
+  background: none;
+  box-shadow: $box-shadow-1;
+  margin-right: 8px;
+}
+
+@mixin errorText {
+  font-weight: $font-weight-extra-bold;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  color: $error-color;
+}
+
+@mixin btnError {
+  @include btn-default-style;
+  background: $error-color;
+  color: $primary-color;
+}

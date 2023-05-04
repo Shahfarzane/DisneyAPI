@@ -1,0 +1,27 @@
+@import "../styles/variables";
+
+.notFoundContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+
+  padding: 1rem 2rem;
+  background: $primary-color;
+  box-shadow: $box-shadow-3;
+}
+.errorText {
+  @include errorText;
+}
+
+.errorTextDetails {
+  font-weight: $font-weight-medium;
+  font-size: $text-xlarge;
+  color: $dark-secondary-color;
+}
+
+.btnError {
+  @include btnError;
+}

@@ -1,0 +1,31 @@
+@import "../styles/variables";
+
+.moviesContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px;
+  background: $primary-color;
+  text-align: left;
+  box-shadow: $box-shadow-3;
+  margin-top: 0.5rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: #555;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
