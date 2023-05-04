@@ -1,5 +1,6 @@
 import styles from "./Nav.module.scss";
-import loginIcon from "../assets/login.png";
+import account from "../assets/account.svg";
+import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -7,19 +8,22 @@ const Nav = () => {
     <section className={styles.navContainer}>
       <article className={styles.navContent}>
         <Link to="/">
-          <h4>Disney</h4>
+          <h3>Disney +</h3>
         </Link>
         <Link to="/add">
-          <h5>add</h5>
+          <h5>Add</h5>
         </Link>
 
         <Link to="/watchlist">
-          <h5>Watchlist</h5>
+          <h5>Top List</h5>
         </Link>
         <Link to="/dashboard">
           <h5>Dashboard</h5>
         </Link>
-        <img src={loginIcon} alt="login" width="42px" />
+
+        <Link to="/dashboard">
+          <img src={account} alt="login" />
+        </Link>
       </article>
     </section>
   );

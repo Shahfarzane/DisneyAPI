@@ -108,12 +108,13 @@ const Form = ({ movie, onSubmit, btnTextValue }) => {
       <label className={styles.formLabel}>Genre</label>
       <div className={styles.wrap}>
         <select
-          name="genre"
+          name={genre}
           id="genre"
-          className={[styles.select, styles.minimal].join(" ")}
+          className={[styles.select].join(" ")}
           value={genre}
           onChange={handleGenreChange}
         >
+          <option className={styles.option}>Pick a Genre</option>
           <option value="Comedy" className={styles.option}>
             Comedy
           </option>

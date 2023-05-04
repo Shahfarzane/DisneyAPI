@@ -14,7 +14,6 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid $secondary-color;
   display: flex;
-  justify-content: space-between;
 }
 .cardItem {
   margin-bottom: 12px;
@@ -66,4 +65,8 @@ a {
   font-size: $text-s-small;
   font-weight: $font-weight-medium;
   line-height: 1.2;
+}
+
+.adminRow {
+  margin-left: auto;
 }

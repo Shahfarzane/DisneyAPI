@@ -14,6 +14,7 @@ $btn-bg-color: #2a85ff;
 $btn-hover-secondary: #83bf6e;
 $btn-hover-color: #b1e5fc;
 $error-color: #ff6551;
+$card-header-color-secondary: #cabdff;
 
 $font-family: "Inter", sans-serif;
 $text-s-small: 13px;
@@ -53,7 +54,7 @@ $flex-align-self: self-start;
   padding: 6px 10px;
   border-radius: 12px;
   color: $dark-secondary-color;
-  background: #cabdff;
+
   font-size: $text-s-small;
   line-height: 1.25rem;
   font-weight: $font-weight-medium;

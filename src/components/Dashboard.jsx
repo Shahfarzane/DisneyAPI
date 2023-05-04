@@ -29,7 +29,7 @@ const Dashboard = () => {
     : null;
   return (
     <>
-      <CardHeader title={"Dashboard"} btnText={"Home"} />
+      <CardHeader title={"Dashboard"} btnText={"Home"} linkToPage={"/"} />
       <section className={styles.card}>{renderedMovies}</section>
     </>
   );

@@ -5,6 +5,13 @@ import { deleteMovie } from "../store";
 import AdminButtons from "./AdminButtons";
 
 function MovieEntity({ movie }) {
+  const tagColors = {
+    comedy: "#D0F95E",
+    adventure: "#BFB3F0",
+    animation: "#89E0D1"
+  };
+  const tagColor = tagColors[movie.genre.toLowerCase()];
+
   if (!movie) {
     return null;
   }
@@ -43,7 +50,10 @@ function MovieEntity({ movie }) {
         <h5 className={styles.labels}>Description</h5>
         <div className={styles.movieContent}>{movie.description}</div>
         <div className={styles.genreContainer}>
-          <div className={styles.movieGenre}>
+          <div
+            className={styles.movieGenre}
+            style={{ backgroundColor: tagColor }}
+          >
             <p>{movie.genre}</p>
           </div>
         </div>

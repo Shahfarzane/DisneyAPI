@@ -2,13 +2,12 @@
 
 .adminContainer {
   display: flex;
-  gap: 8px;
+  gap: 2px;
 }
 .adminButtons {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   width: 36px;
   height: 36px;
   border-radius: 50%;

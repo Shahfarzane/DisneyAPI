@@ -14,7 +14,11 @@ const Add = () => {
   };
   return (
     <>
-      <CardHeader title="Add Movie" btnText={" Dashboard"} />
+      <CardHeader
+        title="Add Movie"
+        btnText={" Dashboard"}
+        linkToPage={"/dashboard"}
+      />
       <div className="form-container">
         <Form onSubmit={handleSubmit} btnTextValue={"Create"} />
       </div>

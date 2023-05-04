@@ -3,7 +3,7 @@
     {
       "name": "The Lion King",
       "id": 1,
-      "image": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_FMjpg_UY2964_.jpg",
+      "image": "https://m.media-amazon.com/images/I/51+Lb8CfPKL.jpg",
       "year": 1994,
       "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
       "genre": "Animation"
@@ -11,18 +11,18 @@
     {
       "name": "Beauty and the Beast",
       "id": 2,
-      "image": "https://m.media-amazon.com/images/M/MV5BMzE5MDM1NDktY2I0OC00YWI5LTk2NzUtYjczNDczOWQxYjM0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1011_.jpg",
+      "image": "https://m.media-amazon.com/images/I/61-I0ni-TtL._UF1000,1000_QL80_.jpg",
       "year": 1991,
       "description": "A prince cursed to spend his days as a hideous monster sets out to regain his humanity by earning a young woman's love.",
-      "genre": "Animation"
+      "genre": "Adventure"
     },
     {
       "name": "Aladdin",
       "id": 3,
-      "image": "https://m.media-amazon.com/images/M/MV5BZTg5ZTVmM2EtZjdhZC00MzBjLWEwZTYtNWIwZDczYzZkMzA4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX930_.jpg",
+      "image": "https://m.media-amazon.com/images/I/51UBfOXQHdL._UF894,1000_QL80_.jpg",
       "year": 1992,
       "description": "A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
-      "genre": "Animation"
+      "genre": "Adventure"
     },
     {
       "name": "Toy Story",
@@ -30,7 +30,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_FMjpg_UX1005_.jpg",
       "year": 1995,
       "description": "A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.",
-      "genre": "Animation"
+      "genre": "Comedy"
     },
 
     {

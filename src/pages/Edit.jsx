@@ -23,7 +23,11 @@ const EditPage = () => {
 
   return (
     <>
-      <CardHeader title="Edit Movie" btnText={"Back to Details"} />
+      <CardHeader
+        title="Edit Movie"
+        btnText={"Back to Details"}
+        linkToPage={`/details/${movie.id}`}
+      />
       <div className="form-container">
         <Form movie={movie} onSubmit={handleSubmit} btnTextValue={"Update"} />
       </div>

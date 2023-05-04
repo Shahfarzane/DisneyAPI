@@ -24,14 +24,11 @@ const DashboardCard = ({ movie }) => {
       <div className={styles.cardRow}>
         <Link to={`/details/${movie.id}`} state={movie}>
           <h6 className={styles.cardItemTitle}>{movie.name}</h6>
+          <p className={styles.cardItemDetails}>{movie.year}</p>
         </Link>
       </div>
 
-      <div className={styles.cardRow}>
-        <p className={styles.cardItemDetails}>{movie.year}</p>
-      </div>
-
-      <div className={styles.cardRow}>
+      <div className={styles.adminRow}>
         <AdminButtons movie={movie} handleDelete={handleDelete} />
       </div>
     </article>
